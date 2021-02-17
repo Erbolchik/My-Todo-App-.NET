@@ -1,9 +1,11 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Reflection;
 
 namespace Todo_App
 {
@@ -20,6 +22,14 @@ namespace Todo_App
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddMediatR(new[]
+            {
+                Assembly.GetExecutingAssembly()
+            },
+            cfg=>
+            {
+
+            });
             services.AddControllersWithViews();
 
             // In production, the React files will be served from this directory

@@ -24,7 +24,7 @@ namespace Todo_App.Controllers.Auth
             var result = commandResult.Result.Match<ActionResult>(
                 success =>
                 {
-                    return Json(new { token = "sosi xyu" });
+                    return Json(new { token = "success" });
                 },
                 notFound =>
                 {
