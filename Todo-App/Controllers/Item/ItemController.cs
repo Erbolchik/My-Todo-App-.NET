@@ -18,11 +18,11 @@ namespace Todo_App.Controllers.Item
             _itemService = itemService;
         }
 
-        [HttpGet]
-        public List<Models.Item> GetItem()
-        {
-            return _itemService.Get();
-        }
+        //[HttpGet]
+        //public List<Models.Item> GetItem()
+        //{
+        //    return _itemService.Get();
+        //}
 
         public void GetItems()
         {

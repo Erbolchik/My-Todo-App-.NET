@@ -9,17 +9,17 @@ namespace Todo_App.Services
 {
     public class ItemService
     {
-        private readonly IMongoCollection<Item> _items;
+        //private readonly IMongoCollection<Item> _items;
 
         public ItemService(ITodoDatabaseSettings settings)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
 
-            _items = database.GetCollection<Item>(settings.ItemCollectionName);
+            //_items = database.GetCollection<Item>(settings.ItemCollectionName);
         }
 
-        public List<Item> Get() => _items.Find(item => true).ToList();
-     
+        //public List<Item> Get() => _items.Find(item => true).ToList();
+
     }
 }
