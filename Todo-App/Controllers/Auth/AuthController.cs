@@ -15,6 +15,12 @@ namespace Todo_App.Controllers.Auth
             return "Hello World";
         }
 
+        [HttpGet]
+        public IActionResult Check()
+        {
+            return Ok();
+        }
+
         [HttpPost("login")]
         public async Task<IActionResult> LoginAsync([FromServices] IMediator medator)
         {
